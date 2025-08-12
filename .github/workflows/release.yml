@@ -57,8 +57,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, macos-13, macos-14, macos-15]
+        os: [windows-latest, macos-13, macos-latest]
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        exclude:
+          - os: macos-13
+            python-version: "3.11"
+          - os: macos-13
+            python-version: "3.12"
 
     steps:
       - uses: actions/checkout@v4
@@ -78,15 +83,11 @@ jobs:
         if: needs.release.outputs.release_created == 'true'
         run: |
           make build
-      - name: check package
+      - name: Upload to PyPi
         if: needs.release.outputs.release_created == 'true'
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TESTPYPI }}
         run: |
-          ls dist/
-      # - name: Upload to PyPi
-      #   if: needs.release.outputs.release_created == 'true'
-      #   env:
-      #     TWINE_USERNAME: __token__
-      #     TWINE_PASSWORD: ${{ secrets.TESTPYPI }}
-      #   run: |
-      #     twine check dist/*.whl
-      #     twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl --verbose
+          twine check dist/*.whl
+          twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl --verbose
