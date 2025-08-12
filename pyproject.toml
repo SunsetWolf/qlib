@@ -99,6 +99,8 @@ analysis = [
   "statsmodels",
 ]
 
+# The license-files here are empty, which is to solve the problem of twine check reporting an error when releasing a new package.
+# Refs: https://github.com/pypa/twine/issues/1216
 [tool.setuptools]
 packages = [
   "qlib",
