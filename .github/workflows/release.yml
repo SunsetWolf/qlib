@@ -53,6 +53,7 @@ jobs:
         # if: needs.release.outputs.release_created == 'true'
         run: |
           python -m pip install twine
+          # python -m pip install -U packaging
       - name: Upload to PyPi
         # if: needs.release.outputs.release_created == 'true'
         env:

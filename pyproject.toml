@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=63.0", "setuptools-scm", "cython", "numpy>=1.24.0"]
+requires = ["setuptools", "setuptools-scm", "cython", "numpy>=1.24.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,6 +7,7 @@ classifiers = [
   "Operating System :: POSIX :: Linux",
   "Operating System :: Microsoft :: Windows",
   "Operating System :: MacOS",
+  "License :: OSI Approved :: MIT License",
   "Development Status :: 3 - Alpha",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
@@ -102,6 +103,7 @@ analysis = [
 packages = [
   "qlib",
 ]
+license-files = []
 
 [project.scripts]
 qrun = "qlib.cli.run:run"
