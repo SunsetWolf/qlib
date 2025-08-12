@@ -7,6 +7,7 @@ classifiers = [
   "Operating System :: POSIX :: Linux",
   "Operating System :: Microsoft :: Windows",
   "Operating System :: MacOS",
+  "License :: OSI Approved :: MIT License",
   "Development Status :: 3 - Alpha",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
@@ -98,11 +99,13 @@ analysis = [
   "statsmodels",
 ]
 
+# The license-files here are empty, which is to solve the problem of twine check reporting an error when releasing a new package.
+# Refs: https://github.com/pypa/twine/issues/1216
 [tool.setuptools]
 packages = [
   "qlib",
 ]
-license-files = ["LICENSE"]
+license-files = []
 
 [project.scripts]
 qrun = "qlib.cli.run:run"
