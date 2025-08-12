@@ -16,6 +16,7 @@ VERSION = get_version().split("+")[0]
 
 
 setup(
+    license="MIT Licence",
     version=VERSION,
     ext_modules=[
         Extension(

@@ -7,6 +7,7 @@ classifiers = [
   "Operating System :: POSIX :: Linux",
   "Operating System :: Microsoft :: Windows",
   "Operating System :: MacOS",
+  "License :: OSI Approved :: MIT License",
   "Development Status :: 3 - Alpha",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
@@ -21,7 +22,6 @@ dynamic = ["version"]
 description = "A Quantitative-research Platform"
 requires-python = ">=3.8.0"
 readme = {file = "README.md", content-type = "text/markdown"}
-license = { text = "MIT" }
 
 dependencies = [
   "pyyaml",
@@ -102,7 +102,6 @@ analysis = [
 packages = [
   "qlib",
 ]
-license-files = ["LICENSE"]
 
 [project.scripts]
 qrun = "qlib.cli.run:run"
