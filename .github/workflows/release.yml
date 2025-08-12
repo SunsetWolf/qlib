@@ -78,11 +78,15 @@ jobs:
         if: needs.release.outputs.release_created == 'true'
         run: |
           make build
-      - name: Upload to PyPi
+      - name: check package
         if: needs.release.outputs.release_created == 'true'
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.TESTPYPI }}
         run: |
-          twine check dist/*.whl
-          twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl --verbose
+          ls dist/
+      # - name: Upload to PyPi
+      #   if: needs.release.outputs.release_created == 'true'
+      #   env:
+      #     TWINE_USERNAME: __token__
+      #     TWINE_PASSWORD: ${{ secrets.TESTPYPI }}
+      #   run: |
+      #     twine check dist/*.whl
+      #     twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl --verbose
