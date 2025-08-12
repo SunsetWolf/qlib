@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.3](https://github.com/SunsetWolf/qlib/compare/v0.10.2...v0.10.3) (2025-08-12)
+
+
+### Bug Fixes
+
+* auto release7 ([#10](https://github.com/SunsetWolf/qlib/issues/10)) ([6d3e1b4](https://github.com/SunsetWolf/qlib/commit/6d3e1b49dfef9c93d2b77a96a0f8c6e9d1727980))
+
 ## [0.10.2](https://github.com/SunsetWolf/qlib/compare/v0.10.1...v0.10.2) (2025-08-12)
 
 
