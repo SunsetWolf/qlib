@@ -12,7 +12,7 @@ def read(rel_path: str) -> str:
 
 NUMPY_INCLUDE = numpy.get_include()
 
-
+# delete setuptools_scm
 setup(
     ext_modules=[
         Extension(
