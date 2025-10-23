@@ -1,9 +1,16 @@
 name: Release
 
+
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  #on:
+  #  push:
+  #    branches:
+  #      - main
 
 permissions:
   contents: read
