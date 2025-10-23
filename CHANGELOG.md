@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.9](https://github.com/SunsetWolf/qlib/compare/v0.9.8...v0.9.9) (2025-10-23)
+
+
+### Bug Fixes
+
+* delete comments ([#4](https://github.com/SunsetWolf/qlib/issues/4)) ([7c09f47](https://github.com/SunsetWolf/qlib/commit/7c09f47c24aaa662f3a17fdf0629feff3ffbe69e))
+
 ## [0.9.8](https://github.com/SunsetWolf/qlib/compare/v0.9.7...v0.9.8) (2025-10-22)
 
 
