@@ -60,7 +60,7 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.TESTPYPI }}
         run: |
           twine check dist/pyqlib-*-manylinux*.whl
-          twine upload --repository-url https://test.pypi.org/legacy/ dist/pyqlib-*-manylinux*.whl --verbose
+          # twine upload --repository-url https://test.pypi.org/legacy/ dist/pyqlib-*-manylinux*.whl --verbose
 
   deploy_with_bdist_wheel:
     needs: release
@@ -104,4 +104,4 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.TESTPYPI }}
         run: |
           twine check dist/*.whl
-          twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl --verbose
+          # twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl --verbose
