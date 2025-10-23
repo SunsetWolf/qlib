@@ -68,7 +68,6 @@ def get_calendar_list(bench_code="CSI300") -> List[pd.Timestamp]:
     logger.info(f"get calendar list: {bench_code}......")
 
     def _get_calendar(url):
-        print(url)
         _value_list = requests.get(url, timeout=None).json()["data"]["klines"]
         return sorted(map(lambda x: pd.Timestamp(x.split(",")[0]), _value_list))
 
