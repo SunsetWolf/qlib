@@ -195,7 +195,7 @@ lint: black pylint flake8 mypy nbqa
 
 # Build the package.
 build:
-	python -m build --wheel
+	python -m build
 
 # Upload the package.
 upload:
