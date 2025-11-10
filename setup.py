@@ -4,15 +4,9 @@ import numpy
 from setuptools import Extension, setup
 
 
-def read(rel_path: str) -> str:
-    here = os.path.abspath(os.path.dirname(__file__))
-    with open(os.path.join(here, rel_path), encoding="utf-8") as fp:
-        return fp.read()
-
-
 NUMPY_INCLUDE = numpy.get_include()
 
-# delete setuptools_scm
+
 setup(
     ext_modules=[
         Extension(

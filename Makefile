@@ -113,7 +113,7 @@ dev: prerequisite all
 
 # Check lint with black.
 black:
-	black . -l 120 --check --diff
+	black . -l 120 --check --diff --exclude qlib/_version.py
 
 # Check code folder with pylint.
 # TODO: These problems we will solve in the future. Important among them are: W0221, W0223, W0237, E1102
@@ -195,7 +195,7 @@ lint: black pylint flake8 mypy nbqa
 
 # Build the package.
 build:
-	python -m build --wheel
+	python -m build
 
 # Upload the package.
 upload:
